@@ -1,0 +1,7 @@
+#!/bin/sh
+#uname=$1
+#memreq=$2
+#cpureq=$3
+ssh $1 "sh request.sh $2 $3"
+
+
