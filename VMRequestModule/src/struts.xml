@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="false" />
+
+	<constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+
+	<package name="default" extends="struts-default">
+
+		
+		<action name="VMAction" class="vmRequest.VMModuleAction" method="execute">
+			<result name="success" >Success.jsp</result>
+			<result name="failure" >Error.jsp</result>
+		</action>
+
+		<action name="generateAction" class="vmRequest.VMGenerateAction" method="execute">
+			<result name="success" >VMDetails.jsp</result>
+			<result name="failure" >Error.jsp</result>
+		</action>
+
+		<action name="bubyeAction" class="vmRequest.VMPackupAction" method="execute">
+			<result name="success" >PackUp.jsp</result>
+			<result name="failure" >Error.jsp</result>
+		</action>
+		
+	</package>
+</struts>
